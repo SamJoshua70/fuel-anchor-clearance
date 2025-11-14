@@ -58,6 +58,14 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      backgroundImage: {
+        'ocean-gradient': 'var(--ocean-gradient)',
+        'wave-gradient': 'var(--wave-gradient)',
+      },
+      boxShadow: {
+        'maritime': 'var(--maritime-shadow)',
+        'glow': 'var(--glow-effect)',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -80,10 +88,21 @@ export default {
             height: "0",
           },
         },
+        "wave": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "33%": { transform: "translateY(-20px) rotate(2deg)" },
+          "66%": { transform: "translateY(-10px) rotate(-2deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "wave": "wave 3s ease-in-out infinite",
+        "float": "float 6s ease-in-out infinite",
       },
     },
   },
